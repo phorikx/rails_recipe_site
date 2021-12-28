@@ -1,0 +1,12 @@
+h1 = @article.title
+
+p  = @article.body
+
+ul
+  li
+    = link_to "Edit", edit_article_path(@article)
+  li 
+    = link_to "Destroy", article_path(@article), method: :delete, data: {confirm: 'Are you sure?'}
+  li
+    = link_to root_path
+      = 'Back to index'
