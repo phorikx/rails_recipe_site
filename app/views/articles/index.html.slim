@@ -1,0 +1,8 @@
+h1 Hello, Rails
+p Our blog has #{Article.public_count} articles.
+ul
+  - @articles.each do |article|
+    - unless article.archived?
+      li
+        = link_to( article.title, article)
+= link_to "New Article", new_article_path
