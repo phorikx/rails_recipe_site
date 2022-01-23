@@ -1,0 +1,14 @@
+doctype html
+html
+  head
+    meta content=("text/html; charset=UTF-8") http-equiv="Content-Type" /
+    title Recipe Website
+    meta content="width=device-width,initial-scale=1" name="viewport" /
+    = csrf_meta_tags
+    = csp_meta_tag
+    = javascript_pack_tag 'application', 'data-turbo-links-track': 'reload'
+    = stylesheet_pack_tag "application", "data-turbo-track": "reload"
+    = favicon_pack_tag 'hamburger.ico'
+    = javascript_importmap_tags
+  body
+    = yield
